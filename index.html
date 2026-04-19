@@ -3,55 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Style | RayDirect</title>
+    <title>RayDirect | Lead by Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom font feel similar to the snippet */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
-        .hero-text { font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #000; 
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Responsive massive text for that "Fantasy" feel */
+        .hero-text { 
+            font-size: clamp(3.5rem, 12vw, 9rem); 
+            line-height: 0.85; 
+            letter-spacing: -0.04em;
+        }
+
+        /* Smooth scroll for navigation */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-[#000] text-white selection:bg-yellow-400 selection:text-black">
+<body class="bg-black text-white selection:bg-white selection:text-black">
 
-    <nav class="fixed top-0 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
-        <div class="font-bold text-2xl uppercase tracking-tighter">RayDirect</div>
-        <div class="hidden md:flex gap-x-8 uppercase text-xs font-medium tracking-widest">
-            <a href="#" class="hover:opacity-50 transition">Work</a>
-            <a href="#" class="hover:opacity-50 transition">Services</a>
-            <a href="#" class="hover:opacity-50 transition">Contact</a>
+    <div class="fixed inset-0 pointer-events-none opacity-10" style="background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px); background-size: 100px 100px;"></div>
+
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference">
+        <div class="font-black text-xl uppercase tracking-tighter">RayDirect</div>
+        <div class="flex gap-x-6 md:gap-x-12 uppercase text-[10px] font-bold tracking-[0.2em]">
+            <a href="#work" class="hover:opacity-50 transition-opacity">Work</a>
+            <a href="#services" class="hover:opacity-50 transition-opacity">Expertise</a>
+            <a href="mailto:hello@raydirect.com" class="hover:opacity-50 transition-opacity">Contact</a>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-end p-8 pb-20 md:p-16">
-        <h1 class="hero-text font-black uppercase tracking-tighter mb-8">
-            Lead by <br> <span class="text-gray-500 italic">Design.</span>
-        </h1>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <p class="md:col-span-5 text-xl text-gray-400">
-                Building digital products that define the future of high-scale automation and creative strategy.
-            </p>
+    <main class="relative min-h-screen flex flex-col justify-end px-6 py-12 md:px-12 md:pb-24">
+        <div class="max-w-[1440px] w-full mx-auto">
+            <h1 class="hero-text font-black uppercase mb-12">
+                Lead by <br> 
+                <span class="text-[#444] italic">Design.</span>
+            </h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 border-t border-white/10 pt-8 gap-8">
+                <p class="md:col-span-5 text-lg md:text-2xl text-gray-400 font-medium leading-tight">
+                    Driving the intersection of high-scale automation and creative strategy. Based in Dhaka, operating globally.
+                </p>
+                <div class="md:col-start-9 md:col-span-4 flex items-end">
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-600">© 2026 Portfolio</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="work" class="px-6 py-24 md:px-12 bg-[#0a0a0a]">
+        <div class="max-w-[1440px] w-full mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32">
+                
+                <div class="group cursor-none">
+                    <div class="overflow-hidden bg-[#111] aspect-[16/10] mb-8 border border-white/5">
+                        <div class="w-full h-full bg-gradient-to-br from-indigo-900/40 via-black to-black group-hover:scale-105 transition-transform duration-1000 flex items-center justify-center text-white/20 font-bold text-6xl">01</div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-3xl font-bold uppercase tracking-tighter">Mini Z-Brain</h3>
+                            <p class="text-gray-500 uppercase text-xs tracking-widest mt-2">Recursive AI Orchestration</p>
+                        </div>
+                        <div class="text-xs border border-white/20 rounded-full px-4 py-1 uppercase font-bold group-hover:bg-white group-hover:text-black transition-colors">View Case</div>
+                    </div>
+                </div>
+
+                <div class="group cursor-none md:mt-48">
+                    <div class="overflow-hidden bg-[#111] aspect-[4/5] mb-8 border border-white/5">
+                        <div class="w-full h-full bg-gradient-to-br from-red-900/40 via-black to-black group-hover:scale-105 transition-transform duration-1000 flex items-center justify-center text-white/20 font-bold text-6xl">02</div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-3xl font-bold uppercase tracking-tighter">Digital Commerce</h3>
+                            <p class="text-gray-500 uppercase text-xs tracking-widest mt-2">Scale & Strategy</p>
+                        </div>
+                        <div class="text-xs border border-white/20 rounded-full px-4 py-1 uppercase font-bold group-hover:bg-white group-hover:text-black transition-colors">View Case</div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <section class="p-8 md:p-16 border-t border-white/10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg bg-gray-900 aspect-video mb-6">
-                    <div class="w-full h-full bg-gradient-to-tr from-purple-900 to-blue-900 group-hover:scale-105 transition duration-700"></div>
-                </div>
-                <h3 class="text-2xl font-bold uppercase">Mini Z-Brain</h3>
-                <p class="text-gray-500 uppercase text-sm tracking-widest">AI Orchestration</p>
-            </div>
-            <div class="group cursor-pointer md:mt-32">
-                <div class="overflow-hidden rounded-lg bg-gray-900 aspect-square mb-6">
-                    <div class="w-full h-full bg-gradient-to-tr from-orange-900 to-red-900 group-hover:scale-105 transition duration-700"></div>
-                </div>
-                <h3 class="text-2xl font-bold uppercase">Digital Commerce</h3>
-                <p class="text-gray-500 uppercase text-sm tracking-widest">Strategy & Lead</p>
-            </div>
-        </div>
-    </section>
+    <footer class="p-12 text-center border-t border-white/5">
+        <p class="text-gray-600 text-xs uppercase tracking-widest italic">Built with intent.</p>
+    </footer>
 
 </body>
 </html>
